@@ -21,24 +21,4 @@
     & > li:not(:first-child) {
       margin-left: 45px;
     }
-  & > li > a {
-    color: var(--color-text-main);
-    background-color: transparent;
-    text-decoration: none;
-    &:visited {
-      color: var(--color-text-main);
-      background-color: transparent;
-      text-decoration: none;
-    }
-    &:hover {
-      color: var(--color-text-main);
-      background-color: transparent;
-      text-decoration: underline;
-    }
-    &:active {
-      color: var(--color-text-main);
-      background-color: transparent;
-      text-decoration: underline;
-    }
-  }
 }

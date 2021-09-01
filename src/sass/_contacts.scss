@@ -1,0 +1,16 @@
+.container {
+  justify-content: center;
+}
+.contacts {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+  justify-content: center;
+  width: 65%;
+  &__wrapper {
+    min-height: 420px;
+  }
+  &__txt{
+    margin: 0;
+  }
+}

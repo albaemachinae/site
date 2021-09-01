@@ -50,3 +50,13 @@ body {
 .about__us__txt {
   color: var(--color-text-sup);
 }
+
+a {
+  cursor: pointer;
+  color: var(--color-text-main);
+  text-decoration: none;
+  &:hover, :active, :visited {
+    color: var(--color-text-main);
+    text-decoration: none;
+  }
+}

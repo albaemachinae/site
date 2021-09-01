@@ -42,6 +42,10 @@
 }
 
 @media (max-width: 1024px) {
+  .header__wrapper {
+    flex-direction: column;
+    width: max-content;
+  }
   .about__tech {
       margin-left: 0;
       width: 90%;

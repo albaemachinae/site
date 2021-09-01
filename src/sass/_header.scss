@@ -1,5 +1,6 @@
 .header {
   margin-top: 4em;
+  max-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +27,7 @@
       border: none;
       background: none;
       outline: none;
-      &:focus {
+      &:focus, :active {
         outline: none;
       }
     }
@@ -41,10 +42,5 @@
     white-space: nowrap;
     text-decoration: none;
     color: var(--color-text-main);
-    &:hover, :visited, :active {
-      cursor: pointer;
-      color: var(--color-text-main);
-      text-decoration: none;
-    }
   }
 }

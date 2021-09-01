@@ -6,38 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machine Albae</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body link="black" vlink="black" alink="black">
-  <style>
-    a:link {
-      color: black;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    
-    a:visited {
-      color: black;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-    
-    a:active {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-    </style>
+<body >
   <div class="container">
     <header class="header">
       <div class="header__logo"></div>
-      <a href="#" class="header__login">Log in</a>
+      <div class="header__wrapper">
+        <div class="header__themes">
+          <label class="header__label"><input type="radio" name="theme" value="light" checked>Light</label>
+          <label class="header__label"><input type="radio" name="theme" value="dark" >Dark</label>
+        </div>
+        <a href="#" class="header__login">Log in</a>
+      </div>
     </header>
     <main class="about">
       <div class="about__tech">
@@ -133,7 +114,7 @@
         <li class="footer__team"><a href="https://docs.google.com/document/d/1GfdvSGZLHgWRpUUWTDwXVJBrn1VjgT4Cn0i0j1S_LUw/edit?usp=sharing">Team</li>
       </ul>
     </footer>
-  </div> <!-- container -->
+  </div> 
 <script src="js/script.js"></script>
 </body>
 </html>

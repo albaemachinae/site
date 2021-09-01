@@ -1,0 +1,47 @@
+:root {
+  --duration_one: 1.3s; //header logo
+  --duration_two: 1s; // menu list & content
+}
+
+.header__logo {
+  animation: fadeIn  var(--duration_one)  ease-in-out;
+}
+
+.about__tech-animation{ // выезд пунктов меню
+    animation: var(--duration_two) cubic-bezier(.165,.015,0,.965) drop_hide;
+    transition: .9s cubic-bezier(.165,.015,0,.965) ;
+}
+
+.about__content {
+  animation: var(--duration_two) cubic-bezier(.165,.015,0,.965) drop_hide;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes drop_hide{
+  0%{
+    transform: translateY(80px);
+    opacity: 0;
+    visibility: hidden;
+
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+};

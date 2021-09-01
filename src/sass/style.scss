@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import "reboot.min";
+@import "header";
+@import "about";
+@import "footer";
+@import "animation";
+@import "color-theme";
+@import "media";
+
+
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+body,html {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer, header {
+  flex: 0 0 auto;
+}
+
+.about {
+  flex: 1 0 auto;
+};

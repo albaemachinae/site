@@ -18,11 +18,18 @@
   &__themes {
     display: flex;
     align-content: center;
-  }
-  &__label {
-    margin: 0;
-    font-weight: 300;
-    font-size: 18px;
+    &__btn {
+      font-weight: 300;
+      font-size: 18px;
+      color: var(--color-text-main);
+      padding: 0;
+      border: none;
+      background: none;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
   }
   &__login {
     width: 65px;

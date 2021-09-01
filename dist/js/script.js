@@ -19,9 +19,15 @@ jsTriggers.forEach(function(trigger) {
     });
 });
 
-document.querySelector('.header__themes').addEventListener('change', (event) => {
-  if (event.target.nodeName === 'INPUT') {
-    document.documentElement.classList.remove('dark','light');
-    document.documentElement.classList.add(event.target.value);
+document.querySelector('.header__themes__btn').addEventListener('click', (e) => {
+  document.documentElement.classList.remove('dark','light');
+  document.documentElement.classList.add(e.target.value);
+  if (e.target.value === 'dark') {
+      e.target.value = 'light';
+      e.target.innerText = 'Light Theme'
+  } else {
+      e.target.value = 'dark';
+      e.target.innerText = 'Dark Theme'
+    }
   }
-})
+)

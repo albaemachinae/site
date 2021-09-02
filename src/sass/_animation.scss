@@ -4,7 +4,8 @@
 }
 
 .header__logo {
-  animation: fadeIn  var(--duration_one)  ease-in-out;
+  animation: fadeIn  var(--duration_one) ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .about__tech-animation{ // выезд пунктов меню

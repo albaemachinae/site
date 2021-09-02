@@ -3,12 +3,12 @@
   --duration_two: 1s; // menu list & content
 }
 
-.header__logo {
+.header__logo_main {
   animation: fadeIn  var(--duration_one) ease-in-out;
   animation-iteration-count: 1;
 }
 
-.about__tech-animation{ // выезд пунктов меню
+.about__tech-animation{ 
     animation: var(--duration_two) cubic-bezier(.165,.015,0,.965) drop_hide;
     transition: .9s cubic-bezier(.165,.015,0,.965) ;
 }

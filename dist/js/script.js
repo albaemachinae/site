@@ -19,15 +19,47 @@ jsTriggers.forEach(function(trigger) {
     });
 });
 
-document.querySelector('.header__themes__btn').addEventListener('click', (e) => {
-  document.documentElement.classList.remove('dark','light');
-  document.documentElement.classList.add(e.target.value);
-  if (e.target.value === 'dark') {
-      e.target.value = 'light';
-      e.target.innerText = 'Light Theme'
+
+let theme = localStorage.getItem('data-theme');
+let themeBtn  = document.querySelector('.header__themes__btn');
+
+const changeThemeToDark = () => {
+    document.documentElement.classList.remove('light');
+    document.documentElement.classList.add('dark');
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeBtn.value = 'dark';
+    themeBtn.innerText = 'Light Theme'; 
+    localStorage.setItem("data-theme", "dark") 
+}
+
+const changeThemeToLight = () => {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+    document.documentElement.setAttribute("data-theme", "light");
+    themeBtn.value = 'light';
+    themeBtn.innerText = 'Dark Theme'
+    localStorage.setItem("data-theme", 'light') 
+}
+
+localStorage.setItem("data-theme", theme);
+  if (theme === 'dark') {
+    document.documentElement.classList.remove('light');
+    document.documentElement.classList.add('dark');
+    themeBtn.value = 'dark';
+    themeBtn.innerText = 'Light Theme'; 
   } else {
-      e.target.value = 'dark';
-      e.target.innerText = 'Dark Theme'
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+    themeBtn.value = 'light';
+    themeBtn.innerText = 'Dark Theme'
+  }
+
+themeBtn.addEventListener('click', (e) => {
+  if (themeBtn.value === 'dark') {
+      changeThemeToLight();
+  } else {
+      changeThemeToDark();
+      
     }
   }
 )

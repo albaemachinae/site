@@ -27,7 +27,7 @@ const changeThemeToDark = () => {
   document.documentElement.classList.remove('light');
   document.documentElement.classList.add('dark');
   themeBtn.value = 'dark';
-  themeBtn.innerText = 'Light theme'; 
+  themeBtn.innerText = 'Светлая тема'; 
   localStorage.setItem("data-theme", "dark") 
 }
 
@@ -35,7 +35,7 @@ const changeThemeToLight = () => {
   document.documentElement.classList.remove('dark');
   document.documentElement.classList.add('light');
   themeBtn.value = 'light';
-  themeBtn.innerText = 'Dark theme';
+  themeBtn.innerText = 'Тёмная тема';
   localStorage.setItem("data-theme", 'light') 
 }
 

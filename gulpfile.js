@@ -17,6 +17,7 @@ gulp.task('server', function() {
 	});
 
 	gulp.watch('src/*.html').on('change', browserSync.reload);
+	gulp.watch('src/ru/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {
@@ -39,7 +40,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('html', function () {
-	return gulp.src('src/*.html')
+	return gulp.src('src/**/*.html')
 		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(gulp.dest('dist/'));
 });

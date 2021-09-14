@@ -21,10 +21,10 @@
         position: absolute;
         display: block;
         left: -42px;
-        top: .65em;
+        top: 14px;
         width: 29px;
         height: 2px;
-        background-color: #000000;
+        background-color: var(--color-text-main);
         pointer-events: none;
       }
 }

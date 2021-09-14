@@ -1,0 +1,13 @@
+.title{
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  &_sm{
+    font-weight: 400;
+  }
+  &_subtitle{
+    font-weight: 200;
+  }
+}

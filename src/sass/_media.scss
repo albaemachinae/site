@@ -1,34 +1,42 @@
 @media (max-width: 1250px){
-  .header__logo {
-    margin-left: 2em;
-  }
   .about {
-    margin-top: 80px;
+    margin-top: 4em;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    &__title{
+      padding-right: 2em;
+      white-space: nowrap;
+    }
     &__tech {
       flex-direction: row;
-      flex-wrap: wrap;
-      width: 86%;
+      
+      flex: 0 1 ;
+      width: 100%;
       align-content: flex-start;
       justify-content: space-between;
-      margin-left: 42px;
-      height: auto;
+      ul {
+        padding-right: 2em;
+      }
       &__title {
         justify-self: start;
       }
     }
+    
+    &__content {
+      width: 90%;
+      margin: 0 auto;
+    }
 
     &__us {
-      margin-top: 2.8em;
+      flex: 0 1 ;
+      margin-top: 3em;
       height: auto;
       flex-basis: auto;
       &__title {
         text-align: center;
-        font-weight: bold;
-        margin-bottom: 2.8em;
+        margin-bottom: 2em;
       }
     }
   }
@@ -50,14 +58,18 @@
   .header__logo {
     margin: 0;
   }
+  .about__title {
+    margin-bottom: 2em;
+  }
   .about__tech {
-      margin-left: 0;
       width: 90%;
+      justify-items: start;
+      flex-wrap: wrap;
       &__title {
         margin-right: 2em;
       }
     }
-  .legal, .team {
+  .legal, .team, .contacts {
     width: 100%;
   }
 }
@@ -67,7 +79,9 @@
     margin-top: 1.5em;
   }
   .about {
-    margin-top: 1em;
+    &__title {
+      text-align: center;
+    }
     &__menu {
       margin: 0;
     }
@@ -85,6 +99,7 @@
 }
 
 @media (max-width: 490px) {
+
   html.dark .header__logo {
     background: url('../img/logo_white_vertical.svg') no-repeat;
     height: 86px;
@@ -99,10 +114,8 @@
   }
 }
   .about {
-    margin-top: 3em;
     &__tech ul>li {
       height: max-content;
-      margin-top: .3em
-      ;
+      margin-bottom: .4em;
     }
   }

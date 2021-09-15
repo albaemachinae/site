@@ -1,8 +1,8 @@
 .about {
   margin-top: 4em;
   display: flex;
-  justify-content: space-evenly;
   justify-items: start;
+  align-self: center;
   flex-flow: row wrap;
   width: 100%;
   &__title {
@@ -12,9 +12,9 @@
     margin-bottom: 1.9em;
   }
   &__tech {
-    height: 30%;
+    height: 50%;
     display: flex;
-    flex: 0 1 444px;
+    flex: 0 1 50%;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -28,7 +28,7 @@
   }
 
   &__us {
-    flex: 0 1 444px;
+    flex: 0 1 35%;
   }
 
   &__content {

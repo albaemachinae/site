@@ -19,7 +19,6 @@ jsTriggers.forEach(function(trigger) {
     });
 });
 
-
 let theme = localStorage.getItem('data-theme');
 let themeBtn  = document.querySelector('.header__themes__btn');
 
@@ -27,15 +26,24 @@ const changeThemeToDark = () => {
   document.documentElement.classList.remove('light');
   document.documentElement.classList.add('dark');
   themeBtn.value = 'dark';
-  themeBtn.innerText = 'Light theme'; 
+  if (lang === 'en') {
+    themeBtn.innerText = 'Light';
+  } else if (lang === 'ru') {
+    themeBtn.innerText = 'Светлая';
+  }
   localStorage.setItem("data-theme", "dark") 
 }
+const lang = document.documentElement.lang;
 
 const changeThemeToLight = () => {
   document.documentElement.classList.remove('dark');
   document.documentElement.classList.add('light');
   themeBtn.value = 'light';
-  themeBtn.innerText = 'Dark theme';
+  if (lang === 'en') {
+    themeBtn.innerText = 'Dark';
+  } else if (lang === 'ru') {
+    themeBtn.innerText = 'Тёмная';
+  }
   localStorage.setItem("data-theme", 'light') 
 }
 

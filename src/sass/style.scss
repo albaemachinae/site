@@ -7,6 +7,9 @@
 @import "contacts";
 @import "legal";
 @import "team";
+@import "blog";
+@import "docs";
+@import "cases";
 @import "animation";
 @import "color-theme";
 @import "media";
@@ -35,6 +38,6 @@ footer, header {
   flex: 0 0 auto;
 }
 
-.about {
+.about, .legal, .team, .contacts, .blog, .docs, .cases {
   flex: 1 0 auto;
 };

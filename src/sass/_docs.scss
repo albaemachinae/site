@@ -1,11 +1,9 @@
-.team{
+.docs{
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  width: 65%;
-  &__txt {
-    margin: 0;
-    word-wrap: break-word;
-  }
+  text-align: center;
+  min-height: 545px;
+  white-space: nowrap;
 }

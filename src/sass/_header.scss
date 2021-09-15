@@ -1,6 +1,6 @@
 .header {
-  margin-top: 4em;
-  max-height: 120px;
+  margin-top: 3em;
+  min-height: 170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,7 @@
   &__wrapper {
     display: flex;
     align-content: center;
-    width: 250px;
+    width: 200px;
     justify-content: space-between;
   }
   &__lang{

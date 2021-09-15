@@ -1,20 +1,21 @@
 .legal {
-  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  margin: 0 0 2em 0;
   align-self: center;
   width: 65%;
-  &__header {
-    margin-top: 5.5em;
-  }
   &__title {
-    margin-left: 1.5em;
+    text-align: center;
   }
   &__title_main {
-    text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
   }
   &__subtitle {
     margin: 0;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 18px;
   }
   &__txt {
     margin: 0;

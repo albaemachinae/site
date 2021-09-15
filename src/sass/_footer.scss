@@ -6,7 +6,8 @@
   align-items: center;
   margin: 3em 0;
   padding: 0;
-  & > li {
+  &__item {
+    margin: 5px 10px;
     list-style: none;
     text-decoration: none;
     border: 2px solid #DADADA;
@@ -17,8 +18,8 @@
       border-color: var(--acent-color);
       cursor: pointer;
     }
-  }
-    & > li:not(:first-child) {
-      margin-left: 45px;
+    &:first-child, :last-child{
+      margin: 5px 0;
     }
+ }
 }

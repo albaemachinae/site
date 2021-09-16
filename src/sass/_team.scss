@@ -2,10 +2,16 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 65%;
   &__txt {
     margin: 0;
     word-wrap: break-word;
+  }
+  &__title {
+    padding-bottom: 1em;
+  }
+  &__teammate {
+    margin-top: 1em;
   }
 }

@@ -68,8 +68,11 @@
         margin-right: 2em;
       }
     }
-  .legal, .team, .contacts {
+  main {
     width: 100%;
+  }
+  .dev{
+    padding-bottom: 2em;
   }
 }
 
@@ -107,10 +110,13 @@
     height: 86px;
     width: 69px;
   }
-}
-  .about {
-    &__tech ul>li {
-      height: max-content;
-      margin-bottom: .5em;
-    }
+  
+  .legal__subtitle {
+    font-size: 14px;
   }
+  .dev {
+    font-size: 16px;
+    
+  }
+}
+  

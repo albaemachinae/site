@@ -3,14 +3,14 @@
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  margin: 0 0 2em 0;
-  align-self: center;
+  overflow-y: auto;
   width: 65%;
+  margin-bottom: 2em;
   &__title {
     text-align: center;
   }
   &__title_main {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
   }
   &__subtitle {
     margin: 0;
@@ -19,11 +19,9 @@
   }
   &__txt {
     margin: 0;
-    font-weight: 400;
   }
   &__rights-list{
     margin: 0;
-    padding: 0 0 0 1.5em;
   }
   &__rights {
     margin-bottom: 5px;

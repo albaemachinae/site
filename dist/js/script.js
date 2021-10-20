@@ -1,26 +1,28 @@
-let jsTriggers = document.querySelectorAll('.js-tab-trigger'),
-    jsContents = document.querySelectorAll('.js-tab-content');
-    startBtn = document.getElementById('start');
-    menuDrop = document.querySelector('.about__menu');
+const jsTriggers = document.querySelectorAll('.js-tab-trigger');
+const jsContents = document.querySelectorAll('.js-tab-content');
+startBtn = document.getElementById('start');
+menuDrop = document.querySelector('.about__menu');
 
-jsTriggers.forEach(function(trigger) {
+jsTriggers.forEach((trigger) => {
   trigger.addEventListener('click', function() {
-    let id = this.getAttribute('data-tab'),
-      content = document.querySelector('.js-tab-content[data-tab="'+id+'"]'),
-      activeTrigger = document.querySelector('.js-tab-trigger.active'),
-      activeContent = document.querySelector('.js-tab-content.active');
+    const id = this.getAttribute('data-tab');
+    const content = document.querySelector('.js-tab-content[data-tab="'+id+'"]');
+    const activeTrigger = document.querySelector('.js-tab-trigger.active');
+    const activeContent = document.querySelector('.js-tab-content.active');
 
-      activeTrigger.classList.remove('active');
-      trigger.classList.add('active');
+    activeTrigger.classList.remove('active');
+    trigger.classList.add('active');
 
-      activeContent.classList.remove('active');
-      activeContent.classList.remove('disable');
-      content.classList.add('active');
-    });
+    activeContent.classList.remove('active');
+    activeContent.classList.remove('disable');
+    content.classList.add('active');
+  });
 });
 
-let theme = localStorage.getItem('data-theme');
-let themeBtn  = document.querySelector('.header__themes__btn');
+const theme = localStorage.getItem('data-theme');
+const themeBtn = document.querySelector('.header__themes__btn');
+
+const {lang} = document.documentElement;
 
 const changeThemeToDark = () => {
   document.documentElement.classList.remove('light');
@@ -31,9 +33,8 @@ const changeThemeToDark = () => {
   } else if (lang === 'ru') {
     themeBtn.innerText = 'Светлая';
   }
-  localStorage.setItem("data-theme", "dark") 
-}
-const lang = document.documentElement.lang;
+  localStorage.setItem("data-theme", "dark"); 
+};
 
 const changeThemeToLight = () => {
   document.documentElement.classList.remove('dark');
@@ -44,21 +45,39 @@ const changeThemeToLight = () => {
   } else if (lang === 'ru') {
     themeBtn.innerText = 'Тёмная';
   }
-  localStorage.setItem("data-theme", 'light') 
-}
+  localStorage.setItem("data-theme", 'light'); 
+};
 
 localStorage.setItem("data-theme", theme);
-  if (theme === 'dark') {
-    changeThemeToDark();
-  } else {
-    changeThemeToLight();
-  }
+if (theme === 'dark') {
+  changeThemeToDark();
+} else {
+  changeThemeToLight();
+}
 
 themeBtn.addEventListener('click', (e) => {
   if (themeBtn.value === 'dark') {
     changeThemeToLight();
   } else {
     changeThemeToDark();
-    }
   }
-)
+}
+);
+
+// modal
+const modal = document.getElementById("modal");
+
+const img = document.getElementById("img");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+};
+
+const span = document.getElementsByClassName("modal")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+};

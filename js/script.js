@@ -1,7 +1,7 @@
 const jsTriggers = document.querySelectorAll('.js-tab-trigger');
 const jsContents = document.querySelectorAll('.js-tab-content');
-startBtn = document.getElementById('start');
-menuDrop = document.querySelector('.about__menu');
+const startBtn = document.getElementById('start');
+const menuDrop = document.querySelector('.about__menu');
 
 jsTriggers.forEach((trigger) => {
   trigger.addEventListener('click', function() {

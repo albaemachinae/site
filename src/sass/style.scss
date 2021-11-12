@@ -29,7 +29,7 @@ body,html {
 .container {
   width: 80%;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,13 +41,13 @@ footer, header {
   margin: 2em 0;
 }
 header {
-  min-height: 15vh;
+  min-height: 8em;
 }
 main {
   flex: 1 0 auto;
   margin-top: 4em 0;
 }
 
-.dev {
-  padding-bottom: 4em;
-}
+// .dev {
+//   padding-bottom: 4em;
+// }

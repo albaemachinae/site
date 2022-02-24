@@ -7,7 +7,7 @@
   animation-iteration-count: 1;
 }
 
-.about__tech-animation{ 
+.tab-animation{ 
     animation: var(--duration) cubic-bezier(.165,.015,0,.965) drop_hide;
     transition: .9s cubic-bezier(.165,.015,0,.965) ;
     position: relative;
@@ -29,7 +29,7 @@
       }
 }
 
-.about__content {
+.about__content, .cases__case {
   animation: var(--duration) cubic-bezier(.165,.015,0,.965) drop_hide;
 }
 

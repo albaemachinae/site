@@ -15,6 +15,7 @@
       &:hover {
         left: 42px;
         cursor: pointer;
+        transition:  all 1.2s ease-out;
       }
       &:hover:before {
         content: "";
@@ -26,6 +27,7 @@
         height: 2px;
         background-color: var(--color-text-main);
         pointer-events: none;
+        transition:  all .01s ease-out;
       }
 }
 
@@ -61,3 +63,27 @@
     visibility: visible;
   }
 };
+
+.underline {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--acent-color);
+    transition: width 1.5s cubic-bezier(.165,.015,0,.965);
+  }
+}
+
+.underline:hover::before{
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+// @media (hover: hover) and (pointer: fine) {
+ 
+// }

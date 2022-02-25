@@ -70,7 +70,7 @@ const modal = document.getElementById("modal");
 const img = document.getElementById("img");
 const modalImg = document.getElementById("modalImg");
 const captionText = document.getElementById("caption");
-img.onclick = function(){
+img.onclick = ()=>{
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
@@ -78,6 +78,7 @@ img.onclick = function(){
 
 const span = document.getElementsByClassName("modal")[0];
 
-span.onclick = function() { 
+span.onclick = ()=> { 
   modal.style.display = "none";
 };
+
